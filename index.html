@@ -1,0 +1,1095 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>오픈미디어 기자단 | 교육 매뉴얼</title>
+<meta name="description" content="활동 준비부터 첫 수익까지. 오픈미디어 기자단 6단계 교육 매뉴얼.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Crect width='34' height='34' rx='9' fill='%23d93929'/%3E%3Cpath d='M23.6 11.2A8.6 8.6 0 1 0 25.6 17' fill='none' stroke='%23fff' stroke-width='3.4' stroke-linecap='round'/%3E%3Ccircle cx='25.4' cy='11.4' r='2.1' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{
+  --red:#d93929;--red-d:#b92a1c;
+  --ink:#161616;--ink2:#555;--mute:#999;
+  --paper:#f4f3f0;--red-l:#fbeeec;--fill:#ecebe7;--hair:#dcdad5;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:128px}
+body{margin:0;background:#fff;color:var(--ink);font-family:Pretendard,'Noto Sans KR','Malgun Gothic',sans-serif;font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;word-break:keep-all}
+img{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer;background:none;border:0;padding:0}
+ol,ul{margin:0;padding:0;list-style:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+
+/* header */
+.top{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);box-shadow:0 1px 0 var(--hair)}
+.top .bar{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo svg{width:32px;height:32px;flex:none}
+.logo b{font-size:18px;font-weight:800;letter-spacing:-.6px}
+.logo span{font-size:15px;font-weight:500;color:var(--ink2)}
+.sharebtn{font-size:13px;color:var(--ink2);padding:6px 2px}
+.sharebtn:hover{color:var(--ink)}
+.stepnav ol{display:grid;grid-template-columns:repeat(6,1fr);max-width:1120px;margin:0 auto;padding:0 28px}
+.stepnav a{display:flex;align-items:center;gap:8px;height:46px;text-decoration:none;font-size:13.5px;color:var(--mute);box-shadow:inset 0 -2px 0 transparent;white-space:nowrap}
+.stepnav a i{font-style:normal;font-size:12px;font-weight:700}
+.stepnav a:hover{color:var(--ink)}
+.stepnav a.on{color:var(--ink);font-weight:700;box-shadow:inset 0 -2px 0 var(--red)}
+.stepnav a.on i{color:var(--red)}
+.stepnav a.done{color:var(--ink2)}
+
+/* hero */
+.hero{position:relative;color:#fff;background:#111 url(media/editorial-hero.png) center/cover no-repeat}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,8,8,.86) 0%,rgba(8,8,8,.55) 48%,rgba(8,8,8,.05) 100%)}
+.hero .wrap{position:relative;padding-top:110px;padding-bottom:110px}
+.hero small{font-size:12px;letter-spacing:3px;color:rgba(255,255,255,.6);font-weight:600}
+.hero h1{font-size:clamp(36px,5vw,60px);line-height:1.2;letter-spacing:-2.4px;margin:18px 0 20px;font-weight:800}
+.hero p{font-size:17px;color:rgba(255,255,255,.78);max-width:440px;margin:0}
+
+/* overview */
+.overview{padding:96px 0 104px;background:var(--paper)}
+.kicker{font-size:13px;font-weight:700;color:var(--red);letter-spacing:.5px}
+.h2{font-size:clamp(26px,3vw,34px);letter-spacing:-1.2px;line-height:1.35;margin:10px 0 0;font-weight:800}
+.road{display:grid;grid-template-columns:repeat(6,1fr);gap:0;margin-top:56px;border-top:1px solid var(--ink)}
+.road a{display:block;text-decoration:none;padding:22px 20px 0 0}
+.road b{display:block;font-size:40px;font-weight:300;color:var(--red);line-height:1;letter-spacing:-1px}
+.road strong{display:block;font-size:16.5px;margin:18px 0 4px}
+.road small{display:block;font-size:13.5px;color:var(--ink2);line-height:1.55}
+.road a:hover strong{color:var(--red)}
+
+/* step */
+.step{padding:128px 0}
+.step.alt{background:var(--paper)}
+.stephead{display:grid;grid-template-columns:150px 1fr;gap:0;margin-bottom:80px}
+.stephead .num{font-size:96px;font-weight:200;line-height:.9;color:var(--red);letter-spacing:-4px}
+.stephead small{display:block;font-size:13px;font-weight:700;color:var(--mute);letter-spacing:1px;margin-bottom:10px}
+.stephead h2{font-size:clamp(30px,3.6vw,44px);letter-spacing:-1.8px;line-height:1.28;margin:0 0 16px;font-weight:800}
+.stephead p{margin:0;color:var(--ink2);font-size:17px;max-width:620px}
+.body{margin-left:150px}
+.block{margin-top:88px}
+.block:first-child{margin-top:0}
+.block > h3{font-size:22px;letter-spacing:-.7px;margin:0 0 6px;font-weight:800}
+.block > h3 + p{margin:0 0 28px;color:var(--ink2)}
+.block > h3:last-child{margin-bottom:24px}
+.note{font-size:13px;color:var(--mute);margin:16px 0 0;line-height:1.6}
+.link{display:inline-flex;gap:6px;align-items:center;font-weight:700;color:var(--red);text-decoration:none;font-size:15px}
+.link:hover{text-decoration:underline;text-underline-offset:4px}
+
+/* timeline (no boxes) */
+.flow{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:28px;counter-reset:f}
+.flow li{counter-increment:f;border-top:2px solid var(--hair);padding-top:16px}
+.flow li:first-child{border-top-color:var(--ink)}
+.flow li::before{content:counter(f,decimal-leading-zero);display:block;font-size:13px;font-weight:700;color:var(--red);margin-bottom:8px}
+.flow b{display:block;font-size:17px;line-height:1.4;margin-bottom:6px}
+.flow span{display:block;font-size:14.5px;color:var(--ink2);line-height:1.6}
+.flow.v{grid-auto-flow:row;gap:0}
+.flow.v li{display:flex;gap:16px;align-items:baseline;border-top:1px solid var(--hair);padding:14px 0}
+.flow.v li::before{margin:0}
+.flow.v li:first-child{border-top-color:var(--ink)}
+
+/* columns of plain text */
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.cols h4{font-size:17px;margin:0 0 6px}
+.cols p{margin:0;color:var(--ink2);font-size:15px}
+.cols em{display:block;font-style:normal;font-size:13px;font-weight:700;color:var(--red);margin-bottom:10px}
+
+/* copy template — reads like a message */
+.tpl{background:var(--paper);border-radius:14px;padding:6px 6px 6px}
+.alt .tpl{background:#fff}
+.tpl-head{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 16px 4px}
+.tpl-head strong{font-size:13px;color:var(--mute);font-weight:700}
+.tpl-tabs{display:flex;gap:18px}
+.tpl-tabs button{font-size:14px;font-weight:700;color:var(--mute);padding:2px 0;box-shadow:inset 0 -2px 0 transparent}
+.tpl-tabs button.on{color:var(--ink);box-shadow:inset 0 -2px 0 var(--ink)}
+.copy{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;font-weight:700;color:var(--red);padding:6px 10px;border-radius:8px}
+.copy::before{content:"";width:14px;height:14px;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='9' y='9' width='12' height='12' rx='2'/%3E%3Cpath d='M5 15V5a2 2 0 0 1 2-2h10'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='9' y='9' width='12' height='12' rx='2'/%3E%3Cpath d='M5 15V5a2 2 0 0 1 2-2h10'/%3E%3C/svg%3E") center/contain no-repeat}
+.copy:hover{background:var(--red-l)}
+.tpl pre{margin:0;padding:10px 16px 16px;white-space:pre-wrap;font:inherit;font-size:15px;line-height:1.85;color:var(--ink)}
+.tpl pre[hidden]{display:none}
+
+details.more{margin-top:32px;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+details.more summary{list-style:none;cursor:pointer;padding:18px 0;font-weight:700;display:flex;justify-content:space-between;align-items:center}
+details.more summary::-webkit-details-marker{display:none}
+details.more summary::after{content:"+";font-size:22px;font-weight:300;color:var(--ink2);line-height:1}
+details.more[open] summary::after{content:"−"}
+details.more > div{padding:4px 0 28px}
+
+/* segmented tabs */
+.tabs{display:inline-flex;gap:28px;border-bottom:1px solid var(--hair);margin-bottom:36px}
+.tabs button{font-weight:700;font-size:16px;color:var(--mute);padding:0 0 12px;box-shadow:inset 0 -2px 0 transparent;margin-bottom:-1px}
+.tabs button:hover{color:var(--ink)}
+.tabs button.on{color:var(--ink);box-shadow:inset 0 -2px 0 var(--red)}
+.panel[hidden]{display:none}
+
+/* STEP 1 — selectable cards (selection is the point, so fill carries it) */
+.acts{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.act{position:relative;text-align:left;background:var(--paper);border-radius:20px;padding:28px 26px 26px;transition:background .2s,color .2s,transform .2s}
+.act:hover{background:var(--fill)}
+.act .ico{width:72px;height:72px;margin-bottom:28px;background:#fff;border-radius:18px;padding:9px}
+.act .ico img{width:100%;height:100%;object-fit:contain}
+.act h3{font-size:22px;letter-spacing:-.7px;margin:0 0 8px}
+.act p{margin:0;font-size:14.5px;color:var(--ink2)}
+.act .pick{position:absolute;top:26px;right:26px;width:22px;height:22px;border-radius:50%;box-shadow:inset 0 0 0 2px #c9c7c2}
+.act.on{background:var(--red);color:#fff}
+.act.on p{color:rgba(255,255,255,.85)}
+.act.on .pick{box-shadow:none;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 22'%3E%3Cpath d='M6.5 11.3l3 3 6-6.3' fill='none' stroke='%23d93929' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/22px}
+.act-detail{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px;padding:36px 4px 0}
+.act-detail[hidden]{display:none}
+.act-detail h5{margin:0 0 8px;font-size:13px;color:var(--mute);font-weight:700}
+.act-detail p{margin:0;font-size:15px;color:var(--ink2)}
+.act-detail .big{font-size:24px;font-weight:800;letter-spacing:-.8px;line-height:1.35;color:var(--ink)}
+.rate{display:flex;gap:28px}
+.rate small{display:block;font-size:13px;color:var(--ink2)}
+.rate b{font-size:34px;font-weight:800;letter-spacing:-1px;line-height:1.1;color:var(--red)}
+.rate b.k{color:var(--ink)}
+
+/* STEP 2 — phone */
+.kakao{display:grid;grid-template-columns:320px 1fr;gap:72px;align-items:start}
+.phone{position:relative;width:300px;padding:11px;background:#1b1b1d;border-radius:44px;box-shadow:inset 0 0 0 2px #3a3a3e,0 40px 70px -30px rgba(0,0,0,.5)}
+.phone::before{content:"";position:absolute;right:-3px;top:150px;width:3px;height:64px;background:#2b2b2e;border-radius:0 3px 3px 0}
+.phone::after{content:"";position:absolute;left:-3px;top:120px;width:3px;height:40px;background:#2b2b2e;border-radius:3px 0 0 3px;box-shadow:0 56px 0 #2b2b2e}
+.screen{position:relative;border-radius:34px;overflow:hidden;aspect-ratio:720/1554;background:#ddd}
+.screen img{width:100%;height:100%;object-fit:cover}
+.cam{position:absolute;top:10px;left:50%;width:10px;height:10px;margin-left:-5px;border-radius:50%;background:#000;box-shadow:0 0 0 2px #1b1b1d;z-index:2}
+.pin{position:absolute;z-index:3;width:26px;height:26px;margin:-13px 0 0 -13px;border-radius:50%;background:var(--ink);color:#fff;font-size:12.5px;font-weight:800;display:grid;place-items:center;box-shadow:0 0 0 2.5px #fff,0 4px 10px rgba(0,0,0,.35);transition:transform .15s,background .15s}
+.pin.on{transform:scale(1.25);background:var(--red)}
+.phone-cap{font-size:13px;color:var(--mute);margin-top:18px;padding-left:4px}
+.legend li{display:grid;grid-template-columns:26px 1fr;gap:16px;padding:20px 0;border-top:1px solid var(--hair);cursor:pointer}
+.legend li:last-child{border-bottom:1px solid var(--hair)}
+.legend li > b{width:26px;height:26px;border-radius:50%;background:var(--fill);color:var(--ink2);display:grid;place-items:center;font-size:12.5px;margin-top:2px;transition:background .15s}
+.legend h4{margin:0 0 2px;font-size:17px;transition:color .15s}
+.legend p{margin:0;font-size:14.5px;color:var(--ink2)}
+.legend li.on > b{background:var(--red);color:#fff}
+.legend li.on h4{color:var(--red)}
+.used{display:flex;gap:14px;align-items:center;margin-top:14px}
+.used img{border-radius:6px;flex:none;box-shadow:0 0 0 1px rgba(0,0,0,.08),0 6px 14px -6px rgba(0,0,0,.25)}
+.used .tag{display:block;font-size:12px;font-weight:700;color:var(--red)}
+.used span{display:block;font-size:13.5px;color:var(--ink2);line-height:1.5}
+
+/* STEP 3 — proof */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.stat b{display:block;font-size:54px;font-weight:800;letter-spacing:-2px;line-height:1.05}
+.stat span{display:block;font-size:14.5px;color:var(--ink2);margin-top:8px}
+.viewer{display:grid;grid-template-columns:220px 1fr;gap:40px;margin-top:56px;align-items:start}
+.vlist button{display:block;width:100%;text-align:left;padding:14px 0 14px 16px;box-shadow:inset 2px 0 0 var(--hair);color:var(--mute)}
+.vlist button b{display:block;font-size:15.5px;font-weight:600}
+.vlist button small{display:block;font-size:12.5px}
+.vlist button:hover{color:var(--ink)}
+.vlist button.on{box-shadow:inset 3px 0 0 var(--red);color:var(--ink)}
+.vlist button.on b{font-weight:800}
+.vshot{background:var(--paper);border-radius:18px;padding:28px}
+.vshot .q{font-size:13px;color:var(--mute);margin-bottom:14px}
+.vshot .q b{color:var(--ink)}
+.vshot img{max-height:500px;width:auto;margin:0 auto;border-radius:10px;box-shadow:0 12px 30px -14px rgba(0,0,0,.3)}
+.vshot p{margin:16px 0 0;font-size:14px;color:var(--ink2);text-align:center}
+
+/* STEP 4 — manual */
+.manual{display:grid;grid-template-columns:230px 1fr;gap:40px;align-items:start}
+.mlist button{width:100%;display:flex;gap:12px;align-items:baseline;text-align:left;padding:9px 0;font-size:14.5px;color:var(--mute)}
+.mlist button i{font-style:normal;font-size:12px;font-weight:700;min-width:18px}
+.mlist button:hover{color:var(--ink)}
+.mlist button.seen{color:var(--ink2)}
+.mlist button.on{color:var(--ink);font-weight:800}
+.mlist button.on i{color:var(--red)}
+.mview img{width:100%;aspect-ratio:1400/788;object-fit:contain;background:#fff;border-radius:14px;box-shadow:0 0 0 1px rgba(0,0,0,.06),0 24px 50px -30px rgba(0,0,0,.4)}
+.mbar{display:flex;align-items:flex-start;gap:24px;padding:24px 4px 0}
+.mbar .txt{flex:1}
+.mbar .txt b{display:block;font-size:19px;letter-spacing:-.5px}
+.mbar .txt span{font-size:15px;color:var(--ink2)}
+.mbar .ctrl{display:flex;gap:10px;align-items:center}
+.mbar .ctrl small{font-size:13px;color:var(--mute);min-width:40px;text-align:center}
+.mbar .ctrl button{width:44px;height:44px;border-radius:50%;background:#fff;font-size:17px;box-shadow:inset 0 0 0 1px var(--hair)}
+.mbar .ctrl button.pri{background:var(--ink);color:#fff;box-shadow:none}
+.mbar .ctrl button.pri:hover:not(:disabled){background:var(--red)}
+.mbar .ctrl button:disabled{opacity:.3;cursor:default}
+.warn{background:var(--red-l);border-radius:12px;padding:16px 20px;font-size:14.5px;margin-top:40px;color:var(--ink2)}
+.warn b{color:var(--red);margin-right:10px}
+
+/* STEP 5 */
+.ch{display:grid;grid-template-columns:1fr 1.15fr;gap:56px;align-items:start}
+.ch h4{font-size:22px;margin:0 0 10px;letter-spacing:-.7px}
+.ch > div > p{margin:0;color:var(--ink2)}
+.dots{margin-top:20px}
+.dots li{position:relative;padding:8px 0 8px 18px;font-size:15px;color:var(--ink2);border-top:1px solid var(--hair)}
+.dots li::before{content:"";position:absolute;left:2px;top:19px;width:5px;height:5px;border-radius:50%;background:var(--red)}
+.shot{margin:0}
+.shot img{border-radius:12px;box-shadow:0 0 0 1px rgba(0,0,0,.06),0 18px 40px -24px rgba(0,0,0,.35)}
+.shot figcaption{font-size:12.5px;color:var(--mute);margin-top:10px;line-height:1.55}
+.stack{display:grid;gap:28px}
+.chat{display:grid;gap:10px;background:var(--paper);border-radius:18px;padding:24px}
+.chat div{max-width:86%;padding:12px 16px;border-radius:18px;font-size:14.5px}
+.chat .c{background:#fff;border-bottom-left-radius:4px}
+.chat .me{justify-self:end;background:var(--ink);color:#fff;border-bottom-right-radius:4px}
+.chat small{display:block;font-size:11.5px;opacity:.6;margin-bottom:2px}
+.weeks{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.weeks b{display:block;font-size:14px;color:var(--red)}
+.weeks span{font-size:15px}
+
+/* STEP 6 */
+.choose{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:88px}
+.choose button{display:flex;gap:20px;align-items:center;text-align:left;background:var(--fill);border-radius:20px;padding:22px 24px;transition:background .2s,color .2s}
+.choose button img{width:60px;height:60px;object-fit:contain;background:#fff;border-radius:16px;padding:7px}
+.choose button b{display:block;font-size:21px;letter-spacing:-.6px}
+.choose button small{display:block;color:var(--ink2);font-size:14px}
+.choose button:hover{background:#e3e1dc}
+.choose button.on{background:var(--red);color:#fff}
+.choose button.on small{color:rgba(255,255,255,.85)}
+.choose button .ck{margin-left:auto;width:22px;height:22px;border-radius:50%;box-shadow:inset 0 0 0 2px #c9c7c2;flex:none}
+.choose button.on .ck{box-shadow:none;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 22'%3E%3Cpath d='M6.5 11.3l3 3 6-6.3' fill='none' stroke='%23d93929' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/22px}
+.money{display:grid;grid-template-columns:auto auto 1fr;gap:64px;align-items:end}
+.money small{display:block;font-size:14px;color:var(--ink2);font-weight:600}
+.money b{display:block;font-size:84px;font-weight:800;letter-spacing:-4px;line-height:1}
+.money .m1 b{color:var(--red)}
+.money span{display:block;font-size:13.5px;color:var(--ink2);margin-top:10px}
+.money p{margin:0;font-size:14.5px;color:var(--ink2);border-left:1px solid var(--hair);padding-left:28px}
+.awards{display:grid;grid-template-columns:repeat(3,1fr);gap:40px 36px}
+.aw{border-top:1px solid var(--ink);padding-top:16px}
+.aw h5{margin:0;font-size:16.5px}
+.aw .d{font-size:12.5px;color:var(--mute);margin:2px 0 10px}
+.aw ul li{font-size:14px;color:var(--ink2);padding:2px 0}
+.aw small{display:block;margin-top:10px;font-size:12.5px;color:var(--mute);line-height:1.5}
+.media4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.media4 article,.media3 figure{margin:0}
+.media4 video{width:100%;aspect-ratio:16/9;border-radius:10px;background:#000}
+.media4 h6{margin:10px 0 0;font-size:14.5px}
+.media4 small{font-size:12.5px;color:var(--mute)}
+.media3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.media3 img{border-radius:10px;aspect-ratio:3/2;object-fit:cover;width:100%}
+.media3 figcaption{font-size:13.5px;color:var(--ink2);margin-top:8px}
+.rows{display:grid;grid-template-columns:1fr 1fr;column-gap:40px}
+.rows a{display:flex;justify-content:space-between;align-items:center;gap:16px;text-decoration:none;padding:16px 0;border-top:1px solid var(--hair)}
+.rows a b{display:block;font-size:15.5px}
+.rows a small{display:block;font-size:13px;color:var(--mute)}
+.rows a span{color:var(--mute);font-size:15px;transition:color .15s,transform .15s}
+.rows a:hover b{color:var(--red)}
+.rows a:hover span{color:var(--red);transform:translate(2px,-2px)}
+
+/* step wrap-up */
+.wrapup{margin-top:112px;padding-top:28px;border-top:1px solid var(--ink);display:grid;grid-template-columns:150px 1fr auto;gap:0;align-items:start}
+.wrapup > b{font-size:13px;font-weight:700;color:var(--mute);letter-spacing:1px;padding-top:2px}
+.wrapup ol{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;counter-reset:w}
+.wrapup li{counter-increment:w;font-size:15px;font-weight:600;line-height:1.55}
+.wrapup li::before{content:counter(w);display:block;font-size:13px;color:var(--red);font-weight:800;margin-bottom:4px}
+.next{margin-left:40px;text-decoration:none;text-align:right;white-space:nowrap}
+.next small{display:block;font-size:12.5px;color:var(--mute)}
+.next strong{font-size:17px}
+.next strong::after{content:" →";color:var(--red)}
+.next:hover strong{color:var(--red)}
+
+.body > .wrapup{margin-left:-150px}
+
+/* library */
+.lib{padding:112px 0;background:var(--ink);color:#fff}
+.lib .kicker{color:#ff8b7e}
+.lib .rows{margin-top:48px}
+.lib .rows a{border-top-color:#333}
+.lib .rows a small{color:#8d8d8d}
+.lib .rows a span{color:#8d8d8d}
+.lib .rows a:hover b,.lib .rows a:hover span{color:#ff8b7e}
+.lib .contact{margin-top:40px;font-size:14px;color:#9d9d9d;max-width:640px}
+footer{background:var(--ink);color:#6f6f6f;font-size:13px;padding:0 0 32px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid #2c2c2c;padding-top:24px}
+
+.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:11px 18px;border-radius:10px;font-size:14px;display:none;z-index:50}
+
+/* responsive */
+@media (max-width:1000px){
+  .body{margin-left:0}
+  .body > .wrapup{margin-left:0}
+  .stephead{grid-template-columns:1fr;margin-bottom:56px}
+  .stephead .num{font-size:64px;margin-bottom:18px}
+  .road{grid-template-columns:repeat(3,1fr);row-gap:36px}
+  .kakao{grid-template-columns:1fr;gap:40px}
+  .phone{margin:0 auto}
+  .phone-cap{text-align:center}
+  .act-detail{grid-template-columns:1fr;gap:24px}
+  .viewer,.manual{grid-template-columns:1fr;gap:20px}
+  .vlist{display:flex;overflow-x:auto;gap:4px}
+  .vlist button{white-space:nowrap;padding:8px 14px 12px;box-shadow:inset 0 -2px 0 var(--hair)}
+  .vlist button.on{box-shadow:inset 0 -3px 0 var(--red)}
+  .mlist{display:flex;overflow-x:auto;gap:18px}
+  .mlist button{white-space:nowrap}
+  .ch{grid-template-columns:1fr;gap:36px}
+  .media4{grid-template-columns:repeat(2,1fr)}
+  .money{grid-template-columns:1fr 1fr;gap:28px}
+  .money p{grid-column:1/-1;border-left:0;padding-left:0}
+  .wrapup{grid-template-columns:1fr;gap:16px}
+  .next{margin-left:0;text-align:left}
+}
+@media (max-width:760px){
+  .wrap{padding:0 18px}
+  .stepnav ol{padding:0 10px}
+  .stepnav a span{display:none}
+  .stepnav a{justify-content:center}
+  .stepnav a i{font-size:13px}
+  .step{padding:88px 0}
+  .acts,.cols,.stats,.awards,.media3,.choose,.rows,.weeks,.wrapup ol{grid-template-columns:1fr}
+  .cols,.stats{gap:28px}
+  .flow{grid-auto-flow:row;gap:20px}
+  .road{grid-template-columns:repeat(2,1fr)}
+  .block{margin-top:72px}
+  .tpl-head{flex-wrap:wrap}
+  .money b{font-size:64px}
+  .mbar{flex-direction:column;gap:14px}
+  .stat b{font-size:46px}
+}
+
+/* round 3 */
+.nextstep{display:flex;justify-content:space-between;align-items:baseline;margin-top:112px;padding-top:24px;border-top:1px solid var(--ink);text-decoration:none}
+.body > .nextstep{margin-left:-150px}
+.nextstep small{font-size:13px;color:var(--mute);font-weight:600}
+.nextstep strong{font-size:22px;letter-spacing:-.6px}
+.nextstep strong::after{content:"  →";color:var(--red)}
+.nextstep:hover strong{color:var(--red)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.flow.v li{display:grid;grid-template-columns:32px 1fr;gap:0 8px;align-items:baseline}
+.flow.v li b{margin:0}
+.flow.v li span{grid-column:2}
+.tpl.msg,.alt .tpl.msg{background:#e3e8ed;border-radius:18px;padding:8px 10px 14px}
+.tpl.msg pre{background:#fff;border-radius:18px 18px 4px 18px;margin:6px 6px 0 32px;padding:14px 18px;box-shadow:0 1px 1px rgba(0,0,0,.06)}
+.tpl.msg .tpl-head strong{color:#6b7580}
+.checks li{border-top:1px solid var(--hair)}
+.checks li:last-child{border-bottom:1px solid var(--hair)}
+.checks label{display:flex;gap:14px;align-items:flex-start;padding:14px 0;cursor:pointer;font-size:15.5px}
+.checks input{appearance:none;-webkit-appearance:none;flex:none;width:20px;height:20px;margin:3px 0 0;border-radius:5px;box-shadow:inset 0 0 0 1.5px #b9b6b0;cursor:pointer;background:#fff center/14px no-repeat}
+.checks input:checked{background-color:var(--ink);box-shadow:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M3 7.2l2.6 2.6L11 4.4' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+.checks label:has(input:checked){color:var(--mute);text-decoration:line-through;text-decoration-color:#c9c7c2}
+.month{display:grid;grid-template-columns:repeat(4,1fr);background:var(--ink);color:#fff;border-radius:16px;overflow:hidden}
+.month div{padding:22px 22px 26px;border-left:1px solid #333}
+.month div:first-child{border-left:0}
+.month b{display:block;font-size:30px;font-weight:300;color:#ff8b7e;line-height:1;margin-bottom:14px}
+.month span{font-size:15px;line-height:1.55}
+.awt{width:100%;border-collapse:collapse;font-size:14.5px}
+.awt thead th{text-align:left;font-size:12.5px;color:var(--mute);font-weight:700;padding:0 16px 10px 0;border-bottom:1px solid var(--ink)}
+.awt tbody th{text-align:left;font-size:15.5px;padding:18px 16px 18px 0;vertical-align:top;white-space:nowrap;border-bottom:1px solid var(--hair)}
+.awt td{padding:18px 16px 18px 0;vertical-align:top;color:var(--ink2);border-bottom:1px solid var(--hair)}
+.awt td.when{white-space:nowrap;color:var(--mute);font-size:13.5px}
+.awt td small{display:block;color:var(--mute);font-size:12.5px;margin-top:4px}
+.study{background:#fff;border-radius:16px;padding:24px}
+.study b{display:block;font-size:13px;color:var(--mute);margin-bottom:6px}
+.study a{display:flex;justify-content:space-between;padding:14px 0;border-top:1px solid var(--hair);text-decoration:none;font-weight:700;font-size:16px}
+.study a span{color:var(--red);font-size:13.5px}
+.study a:hover{color:var(--red)}
+.checksec{padding:112px 0;background:#fff}
+.checksec .lead{color:var(--mute);font-size:14px;margin:8px 0 0}
+.cklist{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:48px}
+.cklist h4{margin:0 0 14px;font-size:18px}
+.cklist h4 i{font-style:normal;display:block;font-size:12.5px;color:var(--red);font-weight:700;margin-bottom:2px}
+@media (max-width:1000px){.split{grid-template-columns:1fr;gap:32px}.body > .nextstep{margin-left:0}.cklist{grid-template-columns:1fr}}
+@media (max-width:760px){.month{grid-template-columns:1fr 1fr}.month div:nth-child(3){border-left:0}.month div:nth-child(n+3){border-top:1px solid #333}.awt thead{display:none}.awt tr{display:block;border-bottom:1px solid var(--hair);padding:14px 0}.awt tbody th,.awt td{display:block;border:0;padding:2px 0;white-space:normal}.nextstep strong{font-size:18px}.tpl.msg pre{margin-left:12px}}
+
+/* round 4: one text scale, rows, side notes */
+:root{--desc:15.5px}
+.act-detail{grid-template-columns:repeat(3,1fr);gap:14px;padding:36px 0 0}
+.act-detail > div{padding:0 26px}
+.act-detail > div:last-child{grid-column:span 2}
+.block > h3 + .tabs{margin-top:16px}
+.act-detail h5{font-size:13px;color:var(--mute);margin:0 0 6px}
+.act-detail p,.act-detail p.k{font-size:17px;line-height:1.6;letter-spacing:-.3px;color:var(--ink2);font-weight:400}
+.act-detail p.k{color:var(--ink);font-weight:700}
+.rowlist{counter-reset:r}
+.rowlist li{counter-increment:r;display:grid;grid-template-columns:44px 190px 1fr;align-items:baseline;padding:18px 0;border-top:1px solid var(--hair)}
+.rowlist li:first-child{border-top-color:var(--ink)}
+.rowlist li:last-child{border-bottom:1px solid var(--hair)}
+.rowlist li::before{content:counter(r,decimal-leading-zero);font-size:13px;font-weight:700;color:var(--red)}
+.rowlist b{font-size:17px;letter-spacing:-.3px}
+.rowlist span{font-size:var(--desc);color:var(--ink2);line-height:1.6}
+.flow.v li{padding:16px 0}
+.flow.v b{font-size:17px}
+.flow span,.legend p,.dots li,.ch > div > p,.block > h3 + p{font-size:var(--desc)}
+.block{position:relative}
+.side{position:absolute;left:-150px;top:6px;width:116px;font-size:13px;line-height:1.65;color:var(--mute)}
+.side a{color:var(--ink2);font-weight:700;text-decoration:none}
+.side a:hover{color:var(--red)}
+.chat .day{display:block;justify-self:center;font-style:normal;font-size:12px;color:#8a8a8a;background:rgba(0,0,0,.05);border-radius:20px;padding:3px 12px}
+.shot figcaption{font-size:13.5px;color:var(--ink2)}
+.month{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:transparent;color:var(--ink);border-radius:16px;overflow:hidden}
+.month div{background:var(--paper);padding:22px 26px;border:0;display:flex;gap:20px;align-items:baseline}
+.month b{display:inline;font-size:15px;font-weight:800;color:var(--red);margin:0;line-height:1.4;white-space:nowrap}
+.month span{font-size:17px;font-weight:600;letter-spacing:-.3px}
+.money{grid-template-columns:auto auto 1fr}
+@media (max-width:1000px){.side{position:static;width:auto;margin:20px 0 0;font-size:13.5px}.month div{border:0!important}}
+@media (max-width:760px){.rowlist li{grid-template-columns:36px 1fr}.rowlist span{grid-column:2;margin-top:2px}.month{grid-template-columns:1fr}.act-detail{grid-template-columns:1fr;gap:20px}.act-detail > div{padding:0}.act-detail > div:last-child{grid-column:auto}}
+
+/* round 5: one spacing / radius / column system
+   radius: 16 = panels & cards, 10 = images, bubbles, inner boxes
+   padding: 24 inside every panel
+   gaps: 16 between cards/tiles in a row, 48 between two text columns */
+:root{--R:16px;--r:10px;--P:24px}
+
+/* margin notes sit at the bottom of their block, on the step-number column */
+.side{top:auto;bottom:0;left:-150px;width:118px;padding-top:12px;border-top:1px solid var(--hair)}
+
+/* block rhythm */
+.block > h3{margin-bottom:8px}
+.block > h3 + p{margin-bottom:24px}
+.block > h3:last-child{margin-bottom:24px}
+.tabs{margin-bottom:24px}
+.block > h3 + .tabs{margin-top:16px}
+
+/* cards & selectable tiles */
+.acts{gap:16px}
+.act{border-radius:var(--R);padding:var(--P)}
+.act .ico{margin-bottom:24px}
+.act .pick{top:var(--P);right:var(--P)}
+.act-detail{gap:16px;padding-top:32px}
+.act-detail > div{padding:0 var(--P)}
+.choose{gap:16px}
+.choose button{border-radius:var(--R);padding:var(--P);gap:16px}
+.choose button img{border-radius:var(--r)}
+.act .ico{border-radius:var(--r)}
+
+/* templates: label, copy and text share the same edges */
+.tpl,.alt .tpl{border-radius:var(--R);padding:var(--P);margin-top:32px}
+.block > h3 + .tpl,.block > h3 + p + .tpl,.split > .tpl,.ch > .tpl{margin-top:0}
+.tpl-head{padding:0 0 16px;align-items:center}
+.copy{padding:2px 0;border-radius:0}
+.copy:hover{background:none;text-decoration:underline;text-underline-offset:3px}
+.tpl pre{padding:0}
+.tpl.msg,.alt .tpl.msg{padding:var(--P);border-radius:var(--R)}
+.tpl.msg pre{margin:0;padding:16px 20px;border-radius:var(--r)}
+
+/* panels */
+.vshot{border-radius:var(--R);padding:var(--P)}
+.vshot img{border-radius:var(--r)}
+.chat{border-radius:var(--R);padding:var(--P)}
+.chat div{border-radius:var(--r)}
+.chat .c{border-bottom-left-radius:3px}
+.chat .me{border-bottom-right-radius:3px}
+.study{border-radius:var(--R);padding:var(--P)}
+.warn{border-radius:var(--R);padding:20px var(--P)}
+.month{gap:16px;border-radius:0;overflow:visible}
+.month div{border-radius:var(--R);padding:var(--P)}
+
+/* images */
+.shot img,.mview img,.media4 video,.media3 img,.used img{border-radius:var(--r)}
+
+/* columns line up: list column 220 + 48 gap everywhere */
+.viewer,.manual{grid-template-columns:220px 1fr;gap:48px}
+.split,.ch,.rows{gap:48px}
+.rows{column-gap:48px}
+.stats{gap:16px}
+.media4,.media3{gap:16px}
+.stack{gap:24px}
+
+@media (max-width:1000px){
+  .side{position:static;width:auto;margin:24px 0 0;padding-top:12px}
+  .viewer,.manual{grid-template-columns:1fr;gap:24px}
+  .split,.ch{gap:32px}
+}
+@media (max-width:760px){
+  :root{--P:20px}
+  .act-detail > div{padding:0}
+}
+
+.stats{grid-template-columns:220px 1fr 1fr;gap:48px}
+.vshot img{width:100%;max-height:560px;object-fit:cover;object-position:top;margin:0}
+.mbar{padding:24px 0 0}
+@media (max-width:1000px){.stats{grid-template-columns:repeat(3,1fr);gap:16px}}
+@media (max-width:760px){.stats{grid-template-columns:1fr}}
+.rows{gap:0 48px}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="logo" href="#top" aria-label="오픈미디어 기자단">
+      <svg viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="9" fill="#d93929"/><path d="M23.6 11.2A8.6 8.6 0 1 0 25.6 17" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round"/><circle cx="25.4" cy="11.4" r="2.1" fill="#fff"/></svg>
+      <b>오픈미디어</b><span>기자단</span>
+    </a>
+    <button class="sharebtn" id="share">링크 복사</button>
+  </div>
+  <nav class="stepnav" aria-label="단계">
+    <ol>
+      <li><a href="#s1"><i>01</i><span>일 이해하기</span></a></li>
+      <li><a href="#s2"><i>02</i><span>활동 준비</span></a></li>
+      <li><a href="#s3"><i>03</i><span>첫 고객 만들기</span></a></li>
+      <li><a href="#s4"><i>04</i><span>기사 진행·등록</span></a></li>
+      <li><a href="#s5"><i>05</i><span>채널 넓히기</span></a></li>
+      <li><a href="#s6"><i>06</i><span>추가 상품 제안</span></a></li>
+    </ol>
+  </nav>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <small>OPENMEDIA REPORTER GUIDE</small>
+    <h1>오픈미디어 기자단<br>교육 매뉴얼</h1>
+    <p>인턴기자·공식기자가 활동을 준비해서 첫 수익을 내기까지, 여섯 단계로 정리했습니다.</p>
+  </div>
+</section>
+
+<section class="overview" id="road">
+  <div class="wrap">
+    <span class="kicker">전체 흐름</span>
+    <h2 class="h2">처음이라면 01부터 순서대로 보세요.</h2>
+    <div class="road">
+      <a href="#s1"><b>01</b><strong>일 이해하기</strong><small>3가지 일과 수익 구조</small></a>
+      <a href="#s2"><b>02</b><strong>활동 준비</strong><small>번호·카카오톡 프로필</small></a>
+      <a href="#s3"><b>03</b><strong>첫 고객 만들기</strong><small>지인에게 첫 기사</small></a>
+      <a href="#s4"><b>04</b><strong>기사 진행·등록</strong><small>자료 받기부터 송출</small></a>
+      <a href="#s5"><b>05</b><strong>채널 넓히기</strong><small>크몽·숨고·블로그</small></a>
+      <a href="#s6"><b>06</b><strong>추가 상품 제안</strong><small>AI TVCF·브랜드대상</small></a>
+    </div>
+  </div>
+</section>
+
+<!-- 01 -->
+<section class="step" id="s1" data-step="1">
+  <div class="wrap">
+    <div class="stephead">
+      <div class="num">01</div>
+      <div>
+        <h2>프리랜서 기자는<br>어떤 일을 하나요?</h2>
+        <p>기업과 가게를 홍보하는 일을 하고, 작업비나 수수료를 받습니다. 카드를 눌러 하나씩 확인해 보세요.</p>
+      </div>
+    </div>
+    <div class="body">
+      <div class="acts" role="tablist">
+        <button class="act on" role="tab" aria-selected="true" data-act="a1"><span class="pick"></span><div class="ico"><img src="media/activity-plane.png" alt=""></div><h3>기사 작성·송출</h3><p>기업이나 가게의 소식을 글로 쓰고, 인터넷 신문에 실어줍니다.</p></button>
+        <button class="act" role="tab" aria-selected="false" data-act="a2"><span class="pick"></span><div class="ico"><img src="media/activity-tv.svg" alt=""></div><h3>AI TVCF · TV 광고</h3><p>AI로 광고영상을 만들고, IPTV에 광고를 내보내는 서비스입니다.</p></button>
+        <button class="act" role="tab" aria-selected="false" data-act="a3"><span class="pick"></span><div class="ico"><img src="media/activity-trophy.png" alt=""></div><h3>브랜드어워즈</h3><p>기업이나 가게에 맞는 브랜드 시상식을 소개합니다.</p></button>
+      </div>
+      <div class="act-detail" id="a1">
+        <div><h5>어떻게 돈을 버나요?</h5><p class="k">고객에게 기사 작업비를 받습니다.</p></div>
+        <div><h5>수익</h5><p>작업비에서 기사 게재 비용 등을 뺀 금액입니다.</p></div>
+      </div>
+      <div class="act-detail" id="a2" hidden>
+        <div><h5>어떻게 돈을 버나요?</h5><p class="k">광고 계약이 되면 수수료를 받습니다.</p></div>
+        <div><h5>수수료</h5><p>고객을 찾아 담당자에게 연결합니다. 금액은 광고 상품마다 다릅니다.</p></div>
+      </div>
+      <div class="act-detail" id="a3" hidden>
+        <div><h5>어떻게 돈을 버나요?</h5><p class="k">참여가 성사되면 수수료를 받습니다.</p></div>
+        <div><h5>수수료</h5><p>인턴기자 20%, 공식기자 30%. 계약·입금 등 지급 조건을 충족한 경우입니다.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 -->
+<section class="step alt" id="s2" data-step="2">
+  <div class="wrap">
+    <div class="stephead">
+      <div class="num">02</div>
+      <div>
+        <h2>업무용 카카오톡부터<br>기자답게 준비하세요</h2>
+        <p>첫 영업은 주변 사람에게 활동을 알리는 것부터입니다. 그 전에 연락받을 창구를 만들어 둡니다.</p>
+      </div>
+    </div>
+    <div class="body">
+      <div class="block">
+        <h3>업무용 번호를 따로 만드세요</h3>
+        <ol class="rowlist">
+          <li><b>세컨폰·별도 번호</b><span>기자 활동용 휴대폰과 별도 번호를 준비합니다.</span></li>
+          <li><b>연락처 옮기기</b><span>기존 연락처를 옮기고, 지인에게 새 번호를 알립니다.</span></li>
+          <li><b>카카오톡 연결 확인</b><span>업무용 카카오톡에서도 지인과 연결되어 있는지 확인합니다.</span></li>
+        </ol>
+      </div>
+
+      <div class="block">
+        <h3>카카오톡 프로필, 이렇게 설정합니다</h3>
+        <p>실제 설정 화면입니다. 번호를 누르면 어디에 무엇을 넣었는지 보입니다.</p>
+        <div class="kakao">
+          <div>
+            <div class="phone">
+              <div class="screen">
+                                <img src="media/kakao-profile-nostatus.png" alt="서윤재 기자의 카카오톡 프로필 실제 설정 화면">
+                <button class="pin" data-pin="1" style="top:3.4%;left:84%">1</button>
+                <button class="pin" data-pin="2" style="top:41.5%;left:13%">2</button>
+                <button class="pin" data-pin="3" style="top:9.5%;left:9%">3</button>
+                <button class="pin" data-pin="4" style="top:50.8%;left:72%">4</button>
+                <button class="pin" data-pin="5" style="top:71%;left:50%">5</button>
+              </div>
+            </div>
+          </div>
+          <ol class="legend">
+            <li data-pin="1"><b>1</b><div><h4>배경사진 = 기자증 이미지</h4><p>PRESS 기자증을 배경으로 넣어 기자라는 사실이 바로 보이게 합니다.</p>
+              <div class="used"><img src="media/seo-press-card-latest.png" alt="배경에 사용한 기자증 이미지" width="58" height="92"><div><span class="tag">사용한 이미지</span><span>기자증 이미지 (세로형) → 배경사진</span></div></div></div></li>
+            <li data-pin="2"><b>2</b><div><h4>프로필사진 = 명함 이미지</h4><p>이름·소속·연락처가 들어간 명함형 이미지를 씁니다.</p>
+              <div class="used"><img src="media/kakao-namecard-crop.png" alt="프로필에 사용한 명함 이미지" width="58" height="58" style="border-radius:50%"><div><span class="tag">사용한 이미지</span><span>명함형 이미지 → 프로필사진</span></div></div></div></li>
+            <li data-pin="3"><b>3</b><div><h4>소속 언론사 홈페이지 링크</h4><p>소속 매체와 언론홍보 서비스 페이지 링크를 넣습니다.</p></div></li>
+            <li data-pin="4"><b>4</b><div><h4>이름 · 소속 매체 · 기자 직함</h4><p>예) 오픈미디어(비즈메디타임즈) 기자. 프로필사진과 글씨가 겹치지 않는지 확인하세요.</p></div></li>
+            <li data-pin="5"><b>5</b><div><h4>스토리 · 기사 문의 안내</h4><p>어떤 기사를 쓰는지 보여주는 이미지를 올려 기사 문의 방법을 알립니다.</p></div></li>
+          </ol>
+        </div>
+        <div class="tpl" data-tpl>
+          <div class="tpl-head"><strong>프로필 소개 문구</strong><button class="copy">복사</button></div>
+<pre>오픈미디어([소속 매체명]) 기자
+기업·매장·행사 소식 / 인터뷰 / 기사 문의
+[업무용 연락처 또는 홈페이지]</pre>
+        </div>
+              </div>
+
+      <div class="block">
+        <h3>공식기자는 개인 홈페이지를 확인하세요</h3>
+        <p>공식기자에게 제공되는 개인 홈페이지를 서비스 안내와 고객 상담에 씁니다. 홍보 전에 아래를 확인하세요.</p>
+        <ul class="checks">
+          <li><label><input type="checkbox">본인 홈페이지 주소와 상담 연결 경로를 담당자에게 확인했다</label></li>
+          <li><label><input type="checkbox">이름·연락처·서비스 범위·기사 사례가 정확하다</label></li>
+          <li><label><input type="checkbox">명함·블로그·프로필에 홈페이지 링크를 넣었다</label></li>
+          <li><label><input type="checkbox">홈페이지 문의가 본인에게 오는지 직접 확인했다</label></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 -->
+<section class="step" id="s3" data-step="3">
+  <div class="wrap">
+    <div class="stephead">
+      <div class="num">03</div>
+      <div>
+        <h2>저장된 연락처가<br>첫 고객입니다</h2>
+        <p>아는 사람에게 기자 활동을 알리고, 첫 기사로 사례를 만든 뒤 그 사례로 다음 고객을 소개받습니다.</p>
+      </div>
+    </div>
+    <div class="body">
+      <div class="block">
+        <h3>이 순서로 움직이세요</h3>
+        <ol class="rowlist">
+          <li><b>지인에게 알리기</b><span>가게·회사 소식, 신제품·행사·인터뷰 등 기사로 소개할 소식을 묻습니다.</span></li>
+          <li><b>첫 기사 쓰기</b><span>공식기자는 송출료 없는 범위에서 지인 소식 2~3건을 무료로 씁니다.</span></li>
+          <li><b>결과 보여주기</b><span>기사 링크와 조회수, 검색 결과를 전달합니다.</span></li>
+          <li><b>소개 받기</b><span>다음 소식을 묻고 유료 의뢰나 주변 소개로 이어갑니다.</span></li>
+        </ol>
+      </div>
+
+      <div class="block">
+        <h3>지인에게 보낼 문구</h3>
+        <div class="tpl msg" data-tpl>
+          <div class="tpl-head"><div class="tpl-tabs"><button class="on">처음 알릴 때</button><button>기사가 나간 뒤</button></div><button class="copy">복사</button></div>
+<pre>나 이번에 인터넷 언론사 기자로 활동하게 됐어.
+가게나 회사 소식, 신제품·행사처럼 알리고 싶은 이야기나 기사로 소개하고 싶은 내용이 있으면 편하게 말해줘. 내가 도와줄게!
+필요한 자료와 진행 방법도 안내해 줄게.</pre>
+<pre hidden>말씀해 준 소식이 기사로 게재돼서 링크 보내드려요.
+[기사 제목]
+[기사 링크]
+다음에 알리고 싶은 소식이나 주변에 기사 홍보가 필요한 분이 있으면 편하게 소개해 주세요.</pre>
+        </div>
+      </div>
+
+      <div class="block">
+        <h3>이런 결과를 보여주세요</h3>
+        <p>지인·주변 기업 기사의 실제 조회수와 네이버 검색 결과입니다.</p>
+        <div class="stats">
+          <div class="stat"><b>7,156</b><span>김포 강변글램핑</span></div>
+          <div class="stat"><b>6,038</b><span>강화 달모루캠핑장</span></div>
+          <div class="stat"><b>5,143</b><span>화곡중학교 축구부</span></div>
+        </div>
+        
+        <div class="viewer" data-viewer>
+          <div class="vlist">
+            <button class="on" data-img="media/naver-dalmoru.png" data-q="강화 달모루 캠핑장" data-c="업체명 검색 결과에 홍보기사 노출"><b>강화 달모루캠핑장</b><small>캠핑장</small></button>
+            <button data-img="media/naver-ppom-nail.png" data-q="인천 용현동 뽐네일" data-c="비즈메디타임즈·에이치엔아시아뉴스 게재 사례"><b>인천 용현동 뽐네일</b><small>네일숍</small></button>
+            <button data-img="media/naver-unni-jewelry.png" data-q="신원동쥬얼리" data-c="대한청년일보·카람라이프 게재 사례"><b>언니반지 · 주얼리</b><small>주얼리</small></button>
+            <button data-img="media/naver-yeppeum.png" data-q="검단예쁨의원" data-c="병원명 검색 결과에 기사 노출"><b>검단예쁨의원</b><small>병원</small></button>
+            <button data-img="media/naver-hwagok-football.png" data-q="화곡중학교축구부" data-c="학교·축구부 활동 소식이 여러 매체에 게재"><b>화곡중학교 축구부</b><small>학교</small></button>
+          </div>
+          <div class="vshot">
+            <div class="q">네이버 검색어 <b>강화 달모루 캠핑장</b></div>
+            <img src="media/naver-dalmoru.png" alt="네이버 검색 결과 화면">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 -->
+<section class="step alt" id="s4" data-step="4">
+  <div class="wrap">
+    <div class="stephead">
+      <div class="num">04</div>
+      <div>
+        <h2>의뢰를 받으면<br>이렇게 진행하세요</h2>
+        <p>고객에게 자료를 받고, 글을 쓴 뒤 확인받아 인터넷 신문에 싣고, 결과를 전달합니다.</p>
+      </div>
+    </div>
+    <div class="body">
+      <div class="block">
+        <h3>의뢰 진행 5단계</h3>
+        <p>비용은 글을 쓰기 전에 정합니다. 3번에서 오른쪽 문구를 보내 자료를 받으세요.</p>
+        <div class="split">
+        <ol class="flow v">
+          <li><b>무슨 소식인지 묻기</b><span>알리고 싶은 내용과 필요한 날짜 확인</span></li>
+          <li><b>비용 정하기</b><span>기사 수, 실을 신문, 작업비를 먼저 합의</span></li>
+          <li><b>자료 받아 쓰기</b><span>업체 소개·사진을 받고 쉽게 작성</span></li>
+          <li><b>고객에게 확인받기</b><span>이름·날짜·가격 등 틀린 곳 확인</span></li>
+          <li><b>링크 보내기</b><span>기사가 실리면 주소를 전달</span></li>
+        </ol>
+        <div class="tpl msg" data-tpl>
+          <div class="tpl-head"><strong>고객에게 받을 자료 요청</strong><button class="copy">복사</button></div>
+<pre>기사 작성을 위해 아래 자료를 보내주세요.
+
+1. 업체명과 간단한 소개
+2. 기사로 알리고 싶은 소식
+3. 관련 날짜·장소·가격 등 자세한 내용
+4. 기사에 사용해도 되는 사진
+5. 담당자 연락처와 희망 완료일</pre>
+        </div>
+        </div>
+      </div>
+
+      <div class="block">
+        <h3>기사 등록, 화면 보며 따라 하기</h3>
+        <p>순서를 누르거나 화살표로 넘기세요. 모두 9단계입니다.</p>
+        <div class="manual" data-manual>
+          <ol class="mlist"></ol>
+          <div class="mview">
+            <img alt="">
+            <div class="mbar">
+              <div class="txt"><b></b><span></span></div>
+              <div class="ctrl"><button class="prev" aria-label="이전">←</button><small></small><button class="nextb pri" aria-label="다음">→</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="warn"><b>꼭 확인</b>공유는 제휴 매체 송출을 위한 설정이며, 모든 매체 게재나 특정 포털 노출·상위 순위를 보장하지 않습니다. 관리자 자동 승인 설정은 임의로 바꾸지 마세요.</div>
+        <p style="margin-top:20px"><a class="link" href="https://drive.google.com/file/d/1WdzlwbMeS4ynJTR-nqxqAsqauHHj5Rdv/view" target="_blank" rel="noopener">기사 등록 원본 매뉴얼 (PDF) ↗</a></p>
+      </div>
+
+      <div class="block">
+        <h3>결과 전달</h3>
+        <p>승인·예약 상태와 실제 게재를 확인한 뒤 링크를 보냅니다.</p>
+        <div class="tpl msg" data-tpl>
+          <div class="tpl-head"><strong>송출 결과 전달 문구</strong><button class="copy">복사</button></div>
+<pre>대표님, 요청하신 기사 게재 결과 안내드립니다.
+기사 제목: [제목]
+게재 링크: [실제 확인한 URL]
+게재 확인일: [날짜]
+추가 확인 또는 수정이 필요한 내용이 있으면 말씀 부탁드립니다.
+다음 신제품·행사·인터뷰 소식도 편하게 상담해 주세요.</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 -->
+<section class="step" id="s5" data-step="5">
+  <div class="wrap">
+    <div class="stephead">
+      <div class="num">05</div>
+      <div>
+        <h2>지인 다음은<br>온라인에서 고객을 찾습니다</h2>
+        <p>언론홍보를 상품으로 올려 모르는 고객의 문의를 받고, 한 번 온 고객은 월 정기 고객으로 이어갑니다.</p>
+      </div>
+    </div>
+    <div class="body">
+      <div class="block" data-tabs>
+        <div class="tabs"><button class="on">크몽</button><button>숨고</button><button>블로그</button></div>
+
+        <div class="panel">
+          <div class="ch">
+            <div>
+              <h4>언론홍보를 상품으로 판매합니다</h4>
+              <p>기사 작성·송출 서비스를 상품으로 등록하고, 고객 문의를 받아 작업합니다.</p>
+              <ul class="dots"><li>제목, 제공 범위, 수정 횟수, 납기, 고객 준비자료를 정리</li><li>판매 등록·심사·수수료는 플랫폼의 현재 안내를 확인</li><li>진행: 등록 → 문의·주문 → 작성·송출 → 완료·정산</li></ul>
+              <div class="tpl" data-tpl>
+                <div class="tpl-head"><strong>서비스 소개글</strong><button class="copy">복사</button></div>
+<pre>[서비스명] 기업·매장 소식을 기사로 정리해 드립니다
+
+진행: 자료 확인 → 초안 작성 → 사실관계 확인·수정 → 송출 → 결과 전달
+준비자료: 회사 소개, 홍보할 소식, 핵심 키워드, 사용 가능한 사진, 담당자 연락처
+계약 전 확인: 기사 수, 송출 범위, 수정 횟수, 일정, 비용
+검색 순위와 특정 포털 노출은 보장하지 않습니다.</pre>
+              </div>
+            </div>
+            <div class="stack">
+              <figure class="shot"><img src="media/kmong-list-redacted.png" alt="크몽 언론홍보 상품 목록 화면" loading="lazy"><figcaption>크몽 · 언론홍보 상품 목록</figcaption></figure>
+              <figure class="shot"><img src="media/kmong-income-redacted.png" alt="크몽 수익관리 화면" loading="lazy"><figcaption>크몽 · 판매자 수익관리 화면</figcaption></figure>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel" hidden>
+          <div class="ch">
+            <div>
+              <h4>프로필과 상담으로 의뢰를 받습니다</h4>
+              <p>제공 가능한 서비스와 활동 지역을 프로필에 소개하고, 상담으로 범위를 정합니다.</p>
+              <ul class="dots"><li>문의 목적·일정·자료 유무를 먼저 파악</li><li>작업 범위를 기준으로 견적 안내</li></ul>
+              <div class="tpl" data-tpl>
+                <div class="tpl-head"><strong>프로필 소개문</strong><button class="copy">복사</button></div>
+<pre>안녕하세요. 오픈미디어 기자단 [이름] 기자입니다.
+기업과 소상공인의 소식, 신제품·행사·대표 인터뷰를 기사로 정리하고 송출을 지원합니다.
+상담 시 홍보 목적과 일정, 보유 자료를 확인해 작업 범위를 안내드립니다.
+문의하실 때 업체명·홍보할 소식·희망 일정을 알려주세요.</pre>
+              </div>
+              <p style="margin-top:24px"><a class="link" href="https://soomgo.com/profile/users/5479294?from=portfolio_detail" target="_blank" rel="noopener">숨고 언론홍보 서비스 소개 사례 ↗</a></p>
+            </div>
+            <div>
+              <div class="chat">
+                <em class="day">교육용 상담 예시</em>
+                <div class="c"><small>고객 요청</small>신제품 소식을 기사로 알리고 싶어요.</div>
+                <div class="me"><small>상담·견적 안내</small>자료와 희망 일정을 확인해 진행 범위를 안내합니다.</div>
+                <div class="me"><small>작업·결과 전달</small>원고 확인 후 송출하고 게재 링크를 전달합니다.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel" hidden>
+          <div class="ch">
+            <div>
+              <h4>이 순서로 첫 글을 씁니다</h4>
+              <p>고객명·사진·결과 화면은 공개 동의를 받은 것만 사용합니다.</p>
+              <ol class="flow v" style="margin-top:24px"><li><b>기자 소개</b></li><li><b>제공 서비스</b></li><li><b>작업 과정</b></li><li><b>실제 사례</b></li><li><b>상담 방법</b></li></ol>
+            </div>
+            <div class="tpl" data-tpl>
+              <div class="tpl-head"><strong>블로그 첫 글 구성</strong><button class="copy">복사</button></div>
+<pre>제목: 오픈미디어 기자단 [이름], 기업과 지역의 소식을 전합니다
+1. 나의 소개와 취재 관심 분야
+2. 도와드릴 수 있는 기사 유형: 기업 소식·행사·인터뷰 등
+3. 진행 과정과 고객 준비자료
+4. 공개 가능한 기사 사례 또는 교육용 예시
+5. 상담 가능한 연락 방법</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block">
+        <h3>단건 고객을 월 정기 고객으로</h3>
+        <p>첫 기사를 낸 고객에게 다음 소식을 묻고, 매달 이어가는 패키지를 제안합니다. 한 달은 이렇게 돌아갑니다.</p>
+        <div class="month">
+          <div><b>1주차</b><span>이번 달 홍보할 소식·일정 협의</span></div>
+          <div><b>2주차</b><span>자료 수집과 첫 기사 초안 작성</span></div>
+          <div><b>3주차</b><span>확정 원고 송출 및 결과 전달</span></div>
+          <div><b>4주차</b><span>추가 진행과 다음 달 주제 협의</span></div>
+        </div>
+        
+        <div class="tpl msg" data-tpl>
+          <div class="tpl-head"><strong>월 정기 홍보 제안 문구</strong><button class="copy">복사</button></div>
+<pre>대표님, 이번 기사처럼 신제품·행사·기업 소식을 꾸준히 알리실 계획이 있으시면 월 단위 홍보 패키지도 진행할 수 있습니다.
+매달 홍보할 주제를 함께 정하고 기사 작성·송출과 결과 전달까지 이어가는 방식입니다.
+월 진행 건수와 필요한 업무 범위를 확인해서 맞춤 구성으로 안내드리겠습니다.
+다음 달에 알리고 싶은 소식이 있으실까요?</pre>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 -->
+<section class="step alt" id="s6" data-step="6">
+  <div class="wrap">
+    <div class="stephead">
+      <div class="num">06</div>
+      <div>
+        <h2>기사 고객에게<br>다음 홍보를 제안하세요</h2>
+        <p>기사 홍보를 마친 고객에게 AI TVCF와 브랜드대상을 소개하고, 성사되면 수수료를 받습니다.</p>
+      </div>
+    </div>
+    <div class="body" data-tabs>
+      <div class="choose">
+        <button class="on"><img src="media/activity-tv.svg" alt=""><span><b>AI TVCF</b><small>제품이나 매장을 영상으로 알리고 싶은 곳</small></span><span class="ck"></span></button>
+        <button><img src="media/activity-trophy.png" alt=""><span><b>브랜드대상</b><small>수상 이력을 홍보에 활용하고 싶은 곳</small></span><span class="ck"></span></button>
+      </div>
+
+      <div class="panel">
+        <div class="block">
+          <h3>어떤 서비스인가요?</h3>
+          <p>AI로 TV 광고영상을 만들어주고, IPTV에 광고를 내보내는 서비스입니다.</p>
+          </div>
+        <div class="block">
+          <h3>제안 순서</h3>
+          <ol class="rowlist">
+            <li><b>고객 찾기</b><span>제품이나 매장을 영상으로 알리고 싶은 곳을 찾습니다.</span></li>
+            <li><b>제안서 전달</b><span>아래 제안서로 서비스를 안내합니다.</span></li>
+            <li><b>담당자 연결</b><span>상담은 담당자에게 연결합니다.</span></li>
+            <li><b>수수료</b><span>광고 계약이 되면 받습니다. 금액은 광고 상품마다 다릅니다.</span></li>
+          </ol>
+        </div>
+        <div class="block">
+          <h3>제안 자료 바로 열기</h3>
+          <div class="rows">
+            <a href="https://drive.google.com/file/d/1BIPqIGuNQmJ_uVM-2VdL6W8nZLTn2Chi/view" target="_blank" rel="noopener"><div><b>TVCF·IPTV 광고 제안서 (PDF)</b><small>AI 광고영상 제작과 IPTV 광고 안내</small></div><span>↗</span></a>
+            <a href="https://kbsnawards.ai.kr/" target="_blank" rel="noopener"><div><b>광고영상 제작 사례</b><small>kbsnawards.ai.kr</small></div><span>↗</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel" hidden>
+        <div class="block">
+          <h3>얼마를 받나요?</h3>
+          <p>참가비 100만원 기준 단순 계산 예시입니다.</p>
+          <div class="money">
+            <div class="m1"><small>인턴기자</small><b>20%</b><span>예시 20만원</span></div>
+            <div class="m2"><small>공식기자</small><b>30%</b><span>예시 30만원</span></div>
+            </div>
+        </div>
+
+        <div class="block">
+          <h3>제안 순서</h3>
+          <div class="split">
+          <ol class="flow v">
+            <li><b>관심 확인</b><span>기사를 마친 고객에게 수상 홍보 관심 묻기</span></li>
+            <li><b>정보 정리</b><span>업종·브랜드·주요 성과를 담당자에게 전달</span></li>
+            <li><b>공식 자료로 안내</b><span>시상 부문·자격·심사·참가비·혜택·일정</span></li>
+            <li><b>정산</b><span>선정·계약·입금 확인 후 수수료</span></li>
+          </ol>
+          <div class="study">
+            <b>제안 전에 먼저 보세요</b>
+            <a href="https://chain-twist-c37.notion.site/2f799c0f7bd381f2a20be89bd29eb10b?pvs=143" target="_blank" rel="noopener">어워즈 기초교육 <span>노션 ↗</span></a>
+            <a href="https://chain-twist-c37.notion.site/2f799c0f7bd381be854ac7bbe514850b?pvs=143" target="_blank" rel="noopener">고객 분석 <span>노션 ↗</span></a>
+          </div>
+          </div>
+          <details class="more">
+            <summary>교육자료 핵심 요약 · 확인 포인트, 고객 분석, 첫 연락</summary>
+            <div>
+              <ol class="rowlist">
+                <li><b>기초교육 확인 포인트</b><span>시상식별 명칭·주최·주관·신청 부문, 신청·심사·선정·행사 흐름, 엠블럼·기사·사진·영상 등 홍보특전, 최신 제안서·신청서와 행사 조건</span></li>
+                <li><b>고객 분석</b><span>기업 정보(회사명·브랜드·업종·홈페이지·담당 부서), 홍보 상황(최근 기사·신제품·행사·수상 이력), 제안 적합성, 고객의 목적, 상담 기록</span></li>
+                <li><b>첫 연락과 후속</b><span>공개된 대표번호·업무용 이메일 확인 → 소속·이름을 밝히고 담당 부서 확인 → 실제 소식·성과를 근거로 짧게 제안 → 요청 자료 전달 → 일정에 맞춰 후속, 원치 않으면 중단</span></li>
+              </ol>
+            </div>
+          </details>
+        </div>
+
+        <div class="block">
+          <h3>2027 시상식 · 핵심 혜택</h3>
+          <p>개최 날짜는 확정되면 안내합니다.</p>
+          <table class="awt"><thead><tr><th>시상식</th><th>일정</th><th>핵심 혜택</th></tr></thead><tbody><tr><th>고객만족 신뢰도대상</th><td class="when">별도 일정 미안내</td><td>엠블럼·인증서·상패, 현판·X배너·플레이스 이미지, 블로그 홍보·기사 송출</td></tr><tr><th>포브스코리아 브랜드대상</th><td class="when">2027 추후 안내</td><td>중앙일보 지면 광고·기사, 포브스 특집기사·온라인 뉴스, 엠블럼·상패·시상식·오찬<small>부문: 소비자선정 최고의 브랜드대상 · 사회공헌대상 · 신뢰받는 혁신대상 · 프리미엄 브랜드대상</small></td></tr><tr><th>KBS N 브랜드어워즈</th><td class="when">2027 추후 안내</td><td>뉴스기사·인스타그램 홍보, 슈퍼자막 15일·수상소감 영상, 엠블럼·상패·시상식·오찬<small>AI 홍보영상 제작은 별도 패키지</small></td></tr><tr><th>국민일보 브랜드대상</th><td class="when">2027 추후 안내</td><td>국민일보 지면 광고·온라인 기사, 수상 사진·수상소감 영상, 엠블럼·상패·시상식<small>CEO대상: CEO 기사·액자·트로피·인증서</small></td></tr><tr><th>동아일보 우수기업 브랜드대상</th><td class="when">2027 추후 안내</td><td>동아일보 지면 광고·온라인 기사, 수상 사진·수상소감 영상, 엠블럼·상패·시상식<small>CEO대상: CEO 기사·액자·트로피·인증서</small></td></tr><tr><th>동아일보 존경받는 의료대상</th><td class="when">2027 추후 안내</td><td>동아일보 지면 광고·기사·온라인 뉴스, 수상소감 영상·홍보 현판·기사 액자, 엠블럼·상패·시상식·오찬</td></tr></tbody></table>
+        </div>
+
+        <div class="block" data-tabs>
+          <h3>고객에게 보여줄 현장 자료</h3>
+          <div class="tabs"><button class="on">시상식 영상</button><button>현장 사진</button></div>
+          <div class="panel">
+            <div class="media4">
+              <article><video controls playsinline preload="none" poster="media/asset-4.jpg" src="media/asset-4.mp4"></video><h6>포브스 시상식 스케치</h6><small>포브스코리아 · 92초 · <a href="https://drive.google.com/file/d/1Lz-l8L6daVh3sFeZ4YIsXx1OO2rBijBg/view?usp=drivesdk" target="_blank" rel="noopener">원본</a></small></article>
+              <article><video controls playsinline preload="none" poster="media/asset-2.jpg" src="media/asset-2.mp4"></video><h6>수상소감 · 보스크</h6><small>KBS N · 89초 · <a href="https://drive.google.com/file/d/1YHTBseAHEVICvXTnm9VcpauR9YS3fIkP/view?usp=drivesdk" target="_blank" rel="noopener">원본</a></small></article>
+              <article><video controls playsinline preload="none" poster="media/asset-1.jpg" src="media/asset-1.mp4"></video><h6>수상소감 · 보니다미</h6><small>국민일보 · 85초 · <a href="https://drive.google.com/file/d/1K9VrL87GChI8Ky8Pz-gYgJsQyvR8wJUR/view?usp=drivesdk" target="_blank" rel="noopener">원본</a></small></article>
+              <article><video controls playsinline preload="none" poster="media/asset-0.jpg" src="media/asset-0.mp4"></video><h6>수상소감 · 채뷰티</h6><small>동아일보 · 73초 · <a href="https://drive.google.com/file/d/1RfSV9hc5M8S0BFwjReqLC8DQZfAjiMBT/view?usp=drivesdk" target="_blank" rel="noopener">원본</a></small></article>
+            </div>
+          </div>
+          <div class="panel" hidden>
+            <div class="media3">
+              <figure><img loading="lazy" src="media/asset-15.webp" alt="KBS N 시상식 행사장 전경"><figcaption>KBS N · 시상식 행사장 전경</figcaption></figure>
+              <figure><img loading="lazy" src="media/asset-17.webp" alt="KBS N 상패 수여 장면"><figcaption>KBS N · 상패 수여 장면</figcaption></figure>
+              <figure><img loading="lazy" src="media/asset-12.webp" alt="2025 KBS N 수상 기념사진"><figcaption>2025 KBS N · 수상 기념사진</figcaption></figure>
+            </div>
+          </div>
+        </div>
+
+        <div class="block">
+          <h3>제안 자료 바로 열기</h3>
+          <div class="rows">
+            <a href="https://brand-awards-reference-yj.earnestcycle.chatgpt.site/#ceremony" target="_blank" rel="noopener"><div><b>시상식 영상·사진</b><small>현장 분위기와 수상 장면</small></div><span>↗</span></a>
+            <a href="https://brand-awards-reference-yj.earnestcycle.chatgpt.site/#reference-list" target="_blank" rel="noopener"><div><b>기업 홍보 활용 사례</b><small>수상 이후 기업이 어떻게 홍보했는지</small></div><span>↗</span></a>
+            <a href="https://brand-awards-reference-yj.earnestcycle.chatgpt.site/#press" target="_blank" rel="noopener"><div><b>시상식·수상 언론 보도</b><small>고객에게 보여줄 기사 원문</small></div><span>↗</span></a>
+            <a href="https://brand-awards-reference-yj.earnestcycle.chatgpt.site/#resources" target="_blank" rel="noopener"><div><b>제안서·신청서 자료 모음</b><small>고객만족 신뢰도대상 · 2026·2027</small></div><span>↗</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="checksec" id="check">
+  <div class="wrap">
+    <span class="kicker">첫 달 체크리스트</span>
+    <h2 class="h2">여기까지 했다면, 혼자 활동할 준비가 된 겁니다.</h2>
+    <p class="lead">체크 표시는 이 브라우저에만 저장됩니다.</p>
+    <div class="cklist" data-store="omg-check">
+      <div><h4><i>01–02</i>준비</h4><ul class="checks">
+        <li><label><input type="checkbox">3가지 일과 수익 구조를 설명할 수 있다</label></li>
+        <li><label><input type="checkbox">업무용 번호를 만들고 지인을 옮겼다</label></li>
+        <li><label><input type="checkbox">배경은 기자증, 프로필은 명함으로 바꿨다</label></li>
+        <li><label><input type="checkbox">공식기자: 홈페이지 주소와 문의 경로를 확인했다</label></li></ul></div>
+      <div><h4><i>03–04</i>첫 기사</h4><ul class="checks">
+        <li><label><input type="checkbox">지인에게 활동 안내 문구를 보냈다</label></li>
+        <li><label><input type="checkbox">비용을 먼저 정하고 자료를 받았다</label></li>
+        <li><label><input type="checkbox">기사를 등록하고 신규 뉴스에서 확인했다</label></li>
+        <li><label><input type="checkbox">실제 게재 링크를 고객에게 보냈다</label></li></ul></div>
+      <div><h4><i>05–06</i>넓히기</h4><ul class="checks">
+        <li><label><input type="checkbox">크몽·숨고·블로그 중 한 곳에 서비스를 올렸다</label></li>
+        <li><label><input type="checkbox">기사 고객에게 월 패키지를 제안했다</label></li>
+        <li><label><input type="checkbox">AI TVCF·브랜드대상을 한 번 이상 소개했다</label></li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="lib" id="lib">
+  <div class="wrap">
+    <span class="kicker">자료실</span>
+    <h2 class="h2">필요할 때 다시 찾는 원본 자료</h2>
+    <div class="rows">
+      <a href="https://brand-awards-reference-yj.earnestcycle.chatgpt.site/" target="_blank" rel="noopener"><div><b>브랜드대상 제안·교육 자료실</b><small>제안서·신청서 / 시상식 영상·사진 / 기업 홍보 사례 / 언론 보도</small></div><span>↗</span></a>
+      <a href="https://drive.google.com/file/d/1BIPqIGuNQmJ_uVM-2VdL6W8nZLTn2Chi/view" target="_blank" rel="noopener"><div><b>TVCF·IPTV 광고 제안서</b><small>PDF 원본</small></div><span>↗</span></a>
+      <a href="https://drive.google.com/file/d/1uN9ckOL-EViQBHM0I06TqohTFjM0tJo7/view" target="_blank" rel="noopener"><div><b>회원가입·기자단 신청 매뉴얼</b><small>PDF 원본</small></div><span>↗</span></a>
+      <a href="https://drive.google.com/file/d/1WdzlwbMeS4ynJTR-nqxqAsqauHHj5Rdv/view" target="_blank" rel="noopener"><div><b>기사 등록 매뉴얼</b><small>PDF 원본</small></div><span>↗</span></a>
+      <a href="https://freelancer.openxcorp.co.kr/" target="_blank" rel="noopener"><div><b>오픈미디어 기자 모집 안내</b><small>지원·비용 참고</small></div><span>↗</span></a>
+      <a href="https://hub.benews.co.kr/" target="_blank" rel="noopener"><div><b>홍보 홈페이지 활용 참고</b><small>서비스 구성</small></div><span>↗</span></a>
+      <a href="https://drive.google.com/drive/folders/1v41PIokN5HA0dDP9gayFv3OYUopL_w5y" target="_blank" rel="noopener"><div><b>제안서·신청서 원본 폴더</b><small>고객만족 신뢰도대상(KCST)</small></div><span>↗</span></a>
+      <a href="https://drive.google.com/drive/folders/18_p-ESkBuhjfEVO6ErTPQ2g0wR7evOPq" target="_blank" rel="noopener"><div><b>제공 특전 이미지</b><small>Google Drive 폴더</small></div><span>↗</span></a>
+    </div>
+    <p class="contact">등록 승인, 전용 홈페이지 주소, 명함 신청, 비용·정산, 교육 일정은 기존에 안내받은 오픈미디어 담당자에게 문의하세요. 교육 일정과 세부 운영 정책은 확정 후 같은 주소에서 업데이트합니다.</p>
+  </div>
+</section>
+<footer><div class="wrap"><span>오픈미디어 · 기자 활동 교육 매뉴얼</span><span>최초 구성 2026.11.16</span></div></footer>
+
+<div id="toast" class="toast" role="status"></div>
+
+<script>
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+function toast(t){const e=$('#toast');e.textContent=t;e.style.display='block';clearTimeout(e._t);e._t=setTimeout(()=>e.style.display='none',2000)}
+async function clip(t){try{await navigator.clipboard.writeText(t);toast('복사했습니다.')}catch{toast('복사가 제한되어 있습니다. 문구를 선택해 복사해 주세요.')}}
+$('#share').onclick=()=>clip(location.href.split('#')[0]);
+
+$$('[data-tpl]').forEach(t=>{
+  const pres=$$('pre',t), tabs=$$('.tpl-tabs button',t);
+  tabs.forEach((b,i)=>b.onclick=()=>{tabs.forEach(x=>x.classList.toggle('on',x===b));pres.forEach((p,j)=>p.hidden=j!==i)});
+  $('.copy',t).onclick=()=>clip((pres.find(p=>!p.hidden)||pres[0]).textContent);
+});
+
+$$('.act').forEach(c=>c.onclick=()=>{
+  $$('.act').forEach(x=>{const on=x===c;x.classList.toggle('on',on);x.setAttribute('aria-selected',on);$('#'+x.dataset.act).hidden=!on});
+});
+
+$$('[data-tabs]').forEach(w=>{
+  const bar=w.querySelector(':scope > .tabs, :scope > .choose'); if(!bar)return;
+  const btns=[...bar.children], panels=$$(':scope > .panel',w);
+  btns.forEach((b,i)=>b.onclick=()=>{btns.forEach(x=>x.classList.toggle('on',x===b));panels.forEach((p,j)=>{p.hidden=j!==i;if(j!==i)$$('video',p).forEach(v=>v.pause())})});
+});
+
+const pinOn=n=>{$$('.pin').forEach(p=>p.classList.toggle('on',p.dataset.pin==n));$$('.legend li').forEach(l=>l.classList.toggle('on',l.dataset.pin==n))};
+$$('.pin,.legend li').forEach(e=>{e.addEventListener('click',()=>pinOn(e.dataset.pin));e.addEventListener('mouseenter',()=>pinOn(e.dataset.pin))});
+pinOn(1);
+
+$$('[data-viewer]').forEach(v=>{
+  const bs=$$('.vlist button',v), img=$('.vshot img',v), q=$('.vshot .q b',v), c=$('.vshot p',v);
+  bs.forEach(b=>b.onclick=()=>{bs.forEach(x=>x.classList.toggle('on',x===b));img.src=b.dataset.img;q.textContent=b.dataset.q;if(c)c.textContent=b.dataset.c});
+});
+
+const M=[
+ ['manuals/publish-02.jpg','로그인 후 이름 선택','로그인한 뒤 본인 이름을 클릭합니다.'],
+ ['manuals/publish-03.jpg','뉴스등록안내 확인','뉴스등록안내에서 등록 가이드를 확인합니다.'],
+ ['manuals/publish-04.jpg','뉴스등록 메뉴 선택','뉴스등록 메뉴로 들어갑니다.'],
+ ['manuals/publish-05.jpg','분류·제목·서브제목 입력','분류·제목·서브제목을 입력하고 자동 입력된 기자 이메일을 확인합니다. 제목은 필수입니다.'],
+ ['manuals/publish-06.jpg','본문과 사진 등록','권장 기준은 본문 12포인트, 이미지 가로 900px 이하입니다.'],
+ ['manuals/publish-07.jpg','태그·기사유형·공유 설정','태그(검색어) 입력 → 기사유형 ‘일반기사’ → 공유 ‘사용’을 고르면 300여 개 제휴 언론사에 송출 → ‘뉴스등록’.'],
+ ['manuals/publish-08.jpg','신규 뉴스 송출 확인','신규 뉴스에 등록한 기사가 올라왔는지 확인합니다.'],
+ ['manuals/publish-09.jpg','기사 구성 확인','제목·사진·본문·기자명이 제대로 나왔는지 확인합니다.'],
+ ['manuals/publish-10.jpg','뉴스관리에서 기사 수정','수정은 PC → 뉴스관리 → 기사 선택에서 합니다.']
+];
+$$('[data-manual]').forEach(w=>{
+  const list=$('.mlist',w), img=$('.mview img',w), tb=$('.txt b',w), ts=$('.txt span',w), cnt=$('.ctrl small',w), prev=$('.prev',w), nxt=$('.nextb',w);
+  list.innerHTML=M.map((m,i)=>`<li><button><i>${String(i+1).padStart(2,'0')}</i>${m[1]}</button></li>`).join('');
+  const bs=$$('button',list); let cur=0;
+  const go=(i,scroll)=>{cur=i;bs.forEach((b,j)=>{b.classList.toggle('on',j===i);if(j<i)b.classList.add('seen')});img.src=M[i][0];img.alt=M[i][1];tb.textContent=M[i][1];ts.textContent=M[i][2];cnt.textContent=(i+1)+' / '+M.length;prev.disabled=i===0;nxt.disabled=i===M.length-1;if(scroll&&list.scrollWidth>list.clientWidth)list.scrollLeft=bs[i].offsetLeft-list.offsetLeft-20};
+  bs.forEach((b,i)=>b.onclick=()=>go(i,1)); prev.onclick=()=>go(Math.max(0,cur-1),1); nxt.onclick=()=>go(Math.min(M.length-1,cur+1),1);
+  M.forEach(m=>{const p=new Image();p.src=m[0]});
+  go(0);
+});
+
+$$('[data-store]').forEach(w=>{const k=w.dataset.store,bx=$$('input',w);let v=[];try{v=JSON.parse(localStorage.getItem(k)||'[]')}catch{}bx.forEach((b,i)=>{b.checked=!!v[i];b.onchange=()=>{try{localStorage.setItem(k,JSON.stringify(bx.map(x=>x.checked)))}catch{}}})});
+const navA=$$('.stepnav a'), steps=$$('[data-step]');
+const spy=()=>{const y=scrollY+160;let cur=0;steps.forEach(s=>{if(s.offsetTop<=y)cur=+s.dataset.step});navA.forEach((a,i)=>{a.classList.toggle('on',i+1===cur);a.classList.toggle('done',i+1<cur)})};
+addEventListener('scroll',spy,{passive:true});spy();
+</script>
+</body>
+</html>
